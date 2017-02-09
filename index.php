@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Rest API</title>
 </head>
 <body>
-<p>Hello, You!</p>
+<p>Hello, Dev! See which segments we have:</p>
 <?php
-require_once 'path.php';
-ob_end_clean();
-var_dump($segments, $location);
+require_once 'segments.php';
+foreach ($segments as $segment):
+	?>
+<div><?php echo $segment;?></div>
+	<?php
+endforeach;
 ?>
 </body>
 </html>
